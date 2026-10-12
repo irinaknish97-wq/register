@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Register in the ESL Classroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#2b1a11;--card:#fbf8f2;--ink:#3b2a20;--mut:#a08c7a;--cream:#efe3d3;--soft:#cdb8a1;--line:rgba(239,227,211,.22);--ok:#6f8f4e;--bad:#b5573a;
+--serif:'Instrument Serif',Georgia,serif;--sans:'DM Sans',system-ui,-apple-system,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{background:var(--bg);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--cream);font:300 15px/1.6 var(--sans);padding:0 20px 90px}
+.wrap{max-width:680px;margin:0 auto}
+header{padding:64px 0 36px}
+.by{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin:0 0 18px;font-weight:400}
+.by strong{color:var(--cream);font-weight:500}
+.hrow{display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px;margin-top:30px}
+h1,h2{font-family:var(--serif);font-weight:400;font-style:italic;margin:0;color:var(--cream)}
+h1{font-size:clamp(34px,7vw,48px);line-height:1.1}
+h2{font-size:clamp(28px,5vw,36px);line-height:1.15;margin-bottom:10px}
+.welcome{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;color:var(--soft);margin:18px 0 0}
+.jump{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.jump a{color:var(--soft);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.jump a:hover{color:var(--cream);border-color:var(--cream)}
+section{margin-top:64px}
+.n{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--soft)}
+.sub{font-size:14.5px;color:var(--soft);margin:0 0 18px;line-height:1.65}
+.sub b{font-weight:500;color:var(--cream)}
+button{font:400 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:11px 22px;border-radius:999px;cursor:pointer;background:transparent;color:var(--cream);border:1px solid var(--soft);transition:.2s}
+button:hover{border-color:var(--cream);background:rgba(239,227,211,.1)}
+button.on{background:var(--cream);color:var(--bg);border-color:var(--cream)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.pill{display:inline-block;padding:11px 22px;border:1px solid var(--soft);border-radius:999px;color:var(--cream);text-decoration:none;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400;transition:.2s}
+.pill:hover{background:var(--cream);color:var(--bg)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.tabs button{padding:9px 16px}
+.paper{background:var(--card);color:var(--ink);border-radius:4px;padding:20px 24px;margin-bottom:12px}
+.paper small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);font-weight:400;margin-bottom:4px}
+.paper q{display:block;quotes:none;font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.3}
+.paper .w{font-size:13.5px;color:var(--mut);margin-top:6px}
+.ctx{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--soft);margin:0 0 14px}
+.box{border:1px solid var(--line);border-radius:4px;padding:18px 22px;margin-top:20px}
+.box b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:20px;display:block;margin-bottom:4px}
+.box p{margin:0;color:var(--soft);font-size:14.5px}
+.q{padding:0 0 22px;margin-bottom:22px;border-bottom:1px solid #e8dccb}
+.q:last-of-type{border:0;margin:0;padding:0}
+.q .s{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.3;margin-bottom:12px}
+.o{display:flex;flex-wrap:wrap;gap:8px}
+.paper button{color:var(--ink);border-color:var(--mut);padding:9px 16px}
+.paper button:hover{border-color:var(--ink);background:#f1e9dc}
+.paper button.right{background:var(--ok);border-color:var(--ok);color:#fff}
+.paper button.wrong{background:var(--bad);border-color:var(--bad);color:#fff}
+.fb{font-size:14px;color:var(--mut);margin-top:10px;min-height:1px}
+.score{font-family:var(--serif);font-style:italic;font-size:22px;margin-top:18px;color:var(--ink)}
+.tech{border-top:1px solid var(--line)}
+.tech:last-child{border-bottom:1px solid var(--line)}
+.hd{display:flex;gap:16px;align-items:baseline;width:100%;text-align:left;border:0;border-radius:0;background:none;padding:18px 2px;text-transform:none;letter-spacing:0;font-size:15px}
+.hd:hover{background:rgba(239,227,211,.05)}
+.hd .t{flex:1;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.25}
+.hd .n{min-width:30px}
+.ar{color:var(--soft);transition:.2s}
+.bd{display:none;padding:0 2px 24px 46px}
+.tech.open .bd{display:block}
+.tech.open .ar{transform:rotate(90deg)}
+.bd p{margin:0 0 12px;color:var(--cream)}
+.bd h4{margin:0 0 6px;font:400 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
+.bd ol{margin:0 0 16px;padding-left:20px;color:var(--soft)}
+.bd li{margin-bottom:4px}
+.ex{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--cream);border-left:2px solid var(--soft);padding:2px 0 2px 14px;margin:0 0 14px}
+.tip{font-size:13.5px;color:var(--soft)}
+.privacy{font-size:12px;letter-spacing:.04em;color:var(--soft);margin:56px 0 0;opacity:.9;text-align:center}
+.privacy a{color:var(--cream)}
+@media(max-width:540px){body{padding:0 14px 70px}header{padding-top:44px}.paper{padding:16px 18px}.bd{padding-left:2px}.hd .n{min-width:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+ <p class="by"><strong>Iryna Varvariuk</strong><span>English teacher · Teacher mentor · Miro creator</span></p>
+ <h1>Register in the ESL classroom</h1>
+ <p class="welcome">Why “correct” English can still sound wrong, and how to help students choose the right words for the right moment. Examples to read, questions to check yourself, and techniques to take into your next lesson.</p>
+ <div class="hrow"><a class="pill" href="https://instagram.com/irenesteaching" target="_blank" rel="noopener">@irenesteaching</a><div class="jump"><a href="#what">i. What is register</a><a href="#check">ii. Check yourself</a><a href="#tech">iii. Techniques</a></div></div>
+</header>
+
+<section id="what">
+ <h2><span class="n">i.</span> What is register?</h2>
+ <p class="sub">Register is how formal or casual your language is, chosen to fit <b>who</b> you’re talking to, <b>where</b> and <b>why</b>. None is “better”; each fits a different moment. A student who tells a client <i>“Hey mate, gimme the report”</i> isn’t making a grammar mistake. It’s a register one. Pick a situation and hear how real people would say it:</p>
+ <div class="tabs" id="scn"></div>
+ <p class="ctx" id="ctx"></p>
+ <div id="spec"></div>
+ <div class="box"><b>What changes between registers?</b><p>Vocabulary (<i>purchase → buy → grab</i>) · grammar and structure (<i>Might I suggest… → Why don’t we…</i>) · contractions and ellipsis (<i>I am → I’m → Running late</i>) · phrasal vs. single verbs (<i>postpone → put off</i>) · pronunciation and connected speech (<i>going to → gonna</i>) · tone and punctuation in writing.</p><p style="margin-top:10px">Neutral and informal / casual overlap, so think of register as a scale rather than four boxes: neutral is safe with almost anyone, informal / casual is for people you know and relaxed settings.</p></div>
+</section>
+
+<section id="check">
+ <h2><span class="n">ii.</span> Check yourself</h2>
+ <p class="sub">Six quick ones, for teachers or students. Tap an answer.</p>
+ <div class="paper" id="qz"></div>
+</section>
+
+<section id="tech">
+ <h2><span class="n">iii.</span> Techniques for teaching register</h2>
+ <p class="sub">Eleven ways to bring register into your lessons. Open any card for the idea, steps, an example and a tip. They work across formal, neutral, informal / casual and slang, not just “register” in general.</p>
+ <div id="techs"></div>
+</section>
+
+<p class="privacy">Made by Iryna Varvariuk · <a href="https://instagram.com/irenesteaching" target="_blank" rel="noopener">@irenesteaching</a> · feel free to share with colleagues</p>
+</div>
+
+<script>
+const R=['Formal','Neutral','Informal / casual','Slang'];
+const S={
+'Running late':['A text before a work meeting, or to someone you don’t know well',
+['Apologies, I’m running about ten minutes behind. Please start without me.','Sorry, I’m running a bit late. Start without me, I’ll join in ten.','Hey, stuck in traffic, be there in ten!','running late lol, save me a seat'],
+['Written, workplace, polite distance','Everyday, safe with almost anyone','Friends, family, close colleagues','Texting among close friends']],
+'Turning down an invite':['Someone invites you to a party or an event',
+['Thank you very much for the invitation. Unfortunately, I won’t be able to attend due to unforeseen circumstances.','Thanks for inviting me, but I can’t make it this weekend.','Hey, sorry, something just came up. Can we rain check?','can’t, I’m so wiped. next time tho!'],
+['Invitations, official events','Most people, spoken or written','Friends; “rain check” is chatty and warm','Close friends, mostly texting']],
+'Agreeing':['In a meeting or in a chat about a decision',
+['I entirely agree with your assessment.','I agree, that makes sense.','Yeah, totally. That’s exactly what I was thinking.','Facts. 100%.'],
+['Meetings, writing, formal speeches','Everyday, spoken or written','Casual talk with people you know','Younger speakers, online chat']],
+'Asking for a favour':['You need a colleague or a friend to do something for you',
+['Would you mind sending me the report by Friday, if it isn’t too much trouble?','Any chance you can send me that report by Friday?','Hey, can you shoot me that report by Friday? Thanks a ton!','yo, hit me with that report by Fri? ur a legend fr'],
+['Distance or hierarchy: manager, client','A safe default','Colleagues and friends','Close friends, quick messages']]};
+const scn=document.getElementById('scn'),spec=document.getElementById('spec'),ctx=document.getElementById('ctx');
+function showS(k){[...scn.children].forEach(b=>b.classList.toggle('on',b.textContent==k));const [c,q,w]=S[k];ctx.textContent=c;
+spec.innerHTML=q.map((x,i)=>`<div class="paper"><small>${R[i]}</small><q>${x}</q><div class="w">${w[i]}</div></div>`).join('')}
+Object.keys(S).forEach(k=>{const b=document.createElement('button');b.textContent=k;b.onclick=()=>showS(k);scn.appendChild(b)});
+showS('Running late');
+
+const Q=[
+['“I regret to inform you that the session has been cancelled.”',0,'Formal: “regret to inform” gives it away.'],
+['“Can you send me the file by Friday?”',1,'Neutral: polite enough for almost anyone, nothing marked.'],
+['“I’m wiped out, let’s call it a day.”',2,'Informal / casual: idiomatic and conversational.'],
+['“That gig was lit, no cap.”',3,'Slang: <i>lit</i> and <i>no cap</i> belong to a particular group and time.'],
+['“Hiya! Long time no see!”',2,'Informal / casual: a friendly greeting between people who know each other.'],
+['Email to a new client: “Hey, so basically your order’s gonna be late, sorry!”',4,'Too informal. Try: “I’m sorry to let you know that your order will be delayed.”']];
+let sc=0,dn=0;const qz=document.getElementById('qz');
+Q.forEach((q,i)=>{const mm=q[1]==4,op=mm?['Too formal','Just right','Too informal']:R,ans=mm?2:q[1];
+const d=document.createElement('div');d.className='q';
+d.innerHTML=`<div class="s">${i+1}. ${q[0]}</div><div class="o"></div><div class="fb"></div>`;
+const o=d.querySelector('.o');
+op.forEach((t,j)=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{
+if(d.dataset.d)return;d.dataset.d=1;dn++;
+if(j==ans){sc++;b.classList.add('right')}else{b.classList.add('wrong');o.children[ans].classList.add('right')}
+d.querySelector('.fb').innerHTML=q[2];
+if(dn==Q.length)document.getElementById('sc').textContent=`You scored ${sc} / ${Q.length}. ${sc>=5?'You have a good ear for register.':'Good start. The techniques below will sharpen it.'}`};o.appendChild(b)});
+qz.appendChild(d)});
+qz.insertAdjacentHTML('beforeend','<div class="score" id="sc"></div>');
+
+const T=[
+['Guess the register from context','Present new language in a short text or dialogue and let students work out the register themselves before you tell them. A natural fit for the meaning, form and pronunciation stage.',
+['Show 3–4 lines from a real context: an email, a voice message, a chat between friends.','Highlight the target expressions.','Ask: <i>Who is speaking to whom? Where? How do you know?</i> Students name the register and underline the clues.','Confirm, then check form and pronunciation (contractions, stress, connected speech).'],
+'“Cheers, mate, I’ll grab a coffee on my way.” Who’s “mate”? Would you write this to your boss?','Add concept-checking questions: <i>Would you say it to a stranger? Is it spoken or written?</i>'],
+['Sorting into categories','Students place vocabulary units on a register scale. Controlled, quick and easy to check.',
+['Prepare 10–15 items: words, phrases or whole sentences.','Students sort them into formal, neutral, informal / casual or slang (cards, columns or a board).','Compare in pairs and justify disagreements.','Debrief: which ones were tricky, and why?'],
+'<i>purchase · buy · grab · cop</i> and <i>I’d appreciate it · thanks · cheers</i>','Include a few “it depends” items. The discussion is where the learning happens.'],
+['Register shift','Students take a message in one register and redo it in another, in writing or out loud (formal to informal, or the other way). It shows exactly which parts of language carry the register.',
+['Give a short text or spoken line in one register.','Students rewrite it or say it aloud for a new audience or medium: a text, a voice message, a face-to-face chat.','Compare the versions, written or spoken, and list what changed: vocabulary, structure, contractions, tone, intonation.','Try a two-step shift (formal to slang) to exaggerate the contrast.'],
+'“I would be grateful if you could postpone our meeting.” → “Can we push our meeting back?”','Always name the new audience (<i>your best friend</i>, <i>your landlord</i>), not just “make it informal”. Writing gives time to notice what changes; speaking trains students to produce it quickly. Try both, one after the other.'],
+['Role play, same scene, two registers','Run the same situation twice with different relationships and compare.',
+['Choose a scene: returning a faulty product, asking for a day off, inviting someone out.','Round 1: formal (stranger or manager). Round 2: casual (friend or sibling).','Observers note the language that changed.','Optional surprise round: one speaker keeps the wrong register and the other reacts.'],
+'Scene: rescheduling. Round 1 with a client, round 2 with a flatmate.','Role cards with relationship, setting and mood work far better than “be formal”.'],
+['Who would say it?','Connect language to people and situations instead of labels.',
+['Prepare expressions and a set of speakers: a CEO to investors, a teen to a friend, a nurse to a patient.','Students match them and justify.','Extension: add a speaker or place that would make the expression sound funny or rude.'],
+'“Could I trouble you for a moment?” A shop assistant? Your best friend? A bank manager?','Use pictures for lower levels (A2–B1).'],
+['Spot the mismatch','Students find and fix language that is correct but wrong for the situation.',
+['Give short texts with 2–3 register mistakes: a formal email with “gonna”, a message to a friend with “I look forward to hearing from you”.','Students underline the mismatches and say why.','They repair the text for the stated audience.'],
+'To a professor: “Hey, can u send me the notes asap?”','Anonymised mistakes from real student writing are the most convincing material.'],
+['“Oops” consequences','Get students talking about what happens when register goes wrong. It builds sociolinguistic awareness, not only vocabulary.',
+['Share a short mismatch scenario: a joke in a job interview, formal language at a party.','Students discuss: <i>How would the listener feel? How could it be repaired?</i>','They share personal experiences, in English or other languages they speak.'],
+'“I once called my teacher ‘mate’…”','Low-pressure and personal: great as a warm-up or end-of-lesson reflection.'],
+['Synonym ladders','Students build a ladder of words for the same idea, from most formal to slang, and say where each one sits.',
+['Give a neutral word or idea: <i>tired, very good, start, money</i>.','In groups, students brainstorm as many alternatives as they can.','They arrange them on a ladder and add a typical sentence for each rung.','Compare ladders between groups and discuss the rungs they disagree on.'],
+'tired: <i>fatigued → exhausted → tired → shattered → dead</i>','Works well on a shared board: students drag words up and down the ladder.'],
+['Choose the best fit','A simple, controlled check: a gap fill with multiple choice. Students pick the option that fits the context and explain why the others don’t.',
+['Write 6–8 short contexts with a gap each: an email to a manager, a message to a friend, a notice, a chat with a stranger.','Give three options per gap. All are correct English, but only one fits the context.','Students choose alone, then compare in pairs.','Ask for the reasoning on every option: why it fits, and why the others don’t (too formal, too casual, wrong audience, wrong medium).'],
+'Message to your manager: “___, I won’t be able to join tomorrow’s meeting.” (a) Unfortunately (b) Soz (c) Nah','Make the wrong options tempting: correct in grammar and meaning, wrong only for the audience. The explanation is the real task.'],
+['Spin the wheel','A speaking activity with a little chance in it. Students spin for a register and a topic, then talk for one minute, using language from your lessons.',
+['Make a wheel (a paper one, or an online spinner) with the registers: formal, neutral, informal / casual, slang.','Add a second wheel or a list of topics: a problem at work, planning a weekend, a delayed flight.','The student spins both, plans for 30 seconds, then speaks for one minute in that register.','Listeners tick the target expressions they hear and say which register it sounded like.','Swap roles and spin again.'],
+'Spin: <i>informal / casual</i> + <i>a cancelled meeting</i>. “So, the meeting got cancelled, which is honestly a relief…”','Allow one re-spin per student. For lower levels, put key phrases on the board as a safety net.'],
+['Okay or cringe?','Give students a short scenario and a line someone could say in it. They decide whether it works in that context. If it doesn’t, they redo it.',
+['Prepare short scenarios with a speaker, a listener and a place, each with one line a person might say.','Students decide: okay or cringe? Use cards, a vote on the board, or thumbs up and down.','They explain why: who is listening, where, and how close are they?','If it doesn’t work, they redo the line so that it fits, in writing or out loud.','Compare the repairs and talk about which version is safest.'],
+'Scenario: you meet your friend’s grandmother for the first time. “Yo, nice to meet ya!” Okay or cringe? Redo it.','Include a few lines that are fine, so students don’t learn to answer “cringe” to everything.']
+];
+const rom=n=>['i','ii','iii','iv','v','vi','vii','viii','ix','x','xi'][n];
+document.getElementById('techs').innerHTML=T.map((t,i)=>`<div class="tech"><button class="hd" onclick="this.parentNode.classList.toggle('open')"><span class="n">${rom(i)}.</span><span class="t">${t[0]}</span><span class="ar">▸</span></button><div class="bd"><p>${t[1]}</p><h4>How to run it</h4><ol>${t[2].map(s=>`<li>${s}</li>`).join('')}</ol><h4>Example</h4><div class="ex">${t[3]}</div><div class="tip">${t[4]}</div></div></div>`).join('');
+</script>
+</body>
+</html>
